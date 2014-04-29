@@ -2,18 +2,12 @@
 
 Summary:	mount/umount utility for Xfce panel
 Name:		xfce4-plugin-mount
-Version:	0.6.4
+Version:	0.6.7
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-mount-plugin/0.6/%{rname}-%{version}.tar.bz2
-# Source0-md5:	f5917e9aa2a06bc6a872cc10d2ee4f6f
-# https://bugzilla.xfce.org/show_bug.cgi?id=9127
-Patch0:		%{name}-label-mount.patch
-# https://bugzilla.xfce.org/show_bug.cgi?id=9399
-Patch1:		%{name}-position-the-popup-menu-nicely.patch
-# https://bugzilla.xfce.org/show_bug.cgi?id=9400
-PAtch2:		%{name}-exclude-multiple-mount-points.patch
+# Source0-md5:	d477220bb43ab4952be857a12a74745d
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,9 +29,6 @@ destdevice.
 
 %prep
 %setup -qn %{rname}-%{version}
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 %{__intltoolize}
